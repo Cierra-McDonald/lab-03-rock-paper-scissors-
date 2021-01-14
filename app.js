@@ -1,21 +1,15 @@
-// import functions and grab DOM elements
-import { makeMUJ } from './utils.js'; 
-
 const poofButton = document.getElementById('buttonPoof');
+const secretMessage = document.getElementById('secretbox');
 const totalWins = document.getElementById('wins');
 const totalRounds = document.getElementById('totalPlayed');
 const totalLosses = document.getElementById('losses'); 
 const totalTies = document.getElementById('tie');
-console.log(totalTies);
-
-console.log(poofButton, totalWins, totalRounds, totalLosses);
 
 // initialize state
 let disneyWins = 0;
-let disneyTotal = 0;
 let disneyLose = 0;
 let disneyTie = 0; 
-
+// define objects 
 const PlayerRules = {
     'Maleficent' : {
         'Ursula' : 'win',
@@ -38,54 +32,26 @@ const playersObject = {
     1: 'Ursula', 
     2: 'Jafar',
 };
-
-// makeMUJ();
-
+// Where the cool stuff happens
 poofButton.addEventListener('click', () => {
-    // console.log('im in the button');
-    // disneyTotal++;
     const computerThrow = Math.ceil(Math.random() * 2);
-    // Randomly generates a number between 0 and 2
-
     let computerPlayer = playersObject[computerThrow];
-    // console.log(computerMUJ); 
-
     const userPlayer = document.querySelector('input[type="radio"]:checked');
-    // // console.log(selectedVillianButton);
     const gameOutcome = PlayerRules[userPlayer.value][computerPlayer];
-    // const userVillian = selectedVillianButton.value;
-    // // console.log(userVillian);
-    console.log('the outcome of the game: ', gameOutcome);
-
+    
     if (gameOutcome === 'win') {
         disneyWins++;
+        secretMessage.textContent = 'Long Live the most evil villian of all! You win!';
     } else if (gameOutcome === 'lose') {
         disneyLose++;
+        secretMessage.textContent = 'Poor unfortunate soul, you lose!';
     } else if (gameOutcome === 'tie') {
         disneyTie++;
+        secretMessage.textContent = 'Mirror, mirror on the wall, its a tie afterall'; 
     }
     totalRounds.textContent = disneyWins + disneyLose + disneyTie;
     totalWins.textContent = disneyWins;
     totalLosses.textContent = disneyLose;
-    totalTies. textContent = disneyTie;
-
-
-    // if (userVillian === computerMUJ) {
-    //     currentDraw.textContent = 'Mirror, mirror on the wall, it is a tie afterall!';
-    // } else if (userVillian === 'Maleficent' && computerMUJ === 'Ursula') {
-    //     disneyWins++,
-    //     currentDraw.textContent = 'Mistriss of Evil rules them all, You win!';
-    // } else if (userVillian === 'Ursula' && computerMUJ === 'Jafar') {
-    //     disneyWins++,
-    //     currentDraw.textContent = 'You are the true queen of the sea, You win!';
-    // } else if (userVillian === 'Jafar' && computerMUJ === 'Maleficent') {
-    //     disneyWins++,
-    //     currentDraw.textContent = 'Prince Ali has nothing on you either, You win!';
-    // }
-
+    totalTies. textContent = disneyTie; 
 });
 
-
-// let totalGamesPlayed = 0,
-
-// set event listeners to update state and DOM
