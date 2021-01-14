@@ -8,8 +8,8 @@ export function makeMUJ(zeroOneTwo) {
     else if (zeroOneTwo === 2) {
         return 'Jafar';
     }
-    console.log(makeMUJ(1));
-    
+    // console.log(makeMUJ(1));
+
 }
         // totalWins.textContent = 'Your villian rules them all!';
     // } else (userChoice !== computerChoice); { totalLosses. textContent = 'You are no true villian!';
