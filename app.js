@@ -32,10 +32,13 @@ poofButton.addEventListener('click', () => {
     if (userVillian === computerMUJ) {
         currentDraw.textContent = 'Mirror, mirror on the wall, it is a tie afterall!';
     } else if (userVillian === 'Maleficent' && computerMUJ === 'Ursula') {
+        disneyWins++,
         currentDraw.textContent = 'Mistriss of Evil rules them all, You win!';
     } else if (userVillian === 'Ursula' && computerMUJ === 'Jafar') {
+        disneyWins++,
         currentDraw.textContent = 'You are the true queen of the sea, You win!';
     } else if (userVillian === 'Jafar' && computerMUJ === 'Maleficent') {
+        disneyWins++,
         currentDraw.textContent = 'Prince Ali has nothing on you either, You win!';
     }
 
