@@ -19,7 +19,7 @@ body {
     --footer-height: 25px;
     
     font-family: 'Titillium Web', sans-serif;
-    background-color: var(--color2);
+    background-color: darkolivegreen;
 }
 
 main {
@@ -78,6 +78,30 @@ header img {
     height: var(--header-height);
 }
 
+p { 
+    display: inline;
+}
+
+.container1 {
+    width: 200px;
+    height: 200px;
+}
+
+.Maleficent {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.Ursula {
+    max-height: 200px;
+    max-width: 200px;
+}
+
+.Jafar {
+    max-height: 200px;
+    max-width: 200px;
+
+}
 
 
 content {

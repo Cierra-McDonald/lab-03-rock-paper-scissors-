@@ -11,7 +11,7 @@ export const PlayerRules = {
         'Ursula': 'tie'
     }, 
     'Jafar' : {
-        'Maleficent' : 'wins',
+        'Maleficent' : 'win',
         'Ursula' : 'lose',
         'Jafar': 'tie'
     }
